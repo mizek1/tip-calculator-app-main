@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './styles/App.less';
-import Display from './components/Display/Display';
+import { Display } from './components/Display';
 import NumberInput from './components/Input/NumberInput';
 import { Card, InputGroup, Label } from './styles/General.styles';
 import TipsSelect from './components/TipsSelect/TipsSelect';

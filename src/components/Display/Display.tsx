@@ -7,7 +7,7 @@ export interface DisplayProps {
   reset: () => void;
 }
 
-export default function Display({
+export function Display({
   totalTipPerPerson: totalTipPerPerson,
   totalAmountPerPerson,
   disableReset,
@@ -21,14 +21,18 @@ export default function Display({
             <span>Tip Amount</span>
             <span>/ person</span>
           </div>
-          <h2>${totalTipPerPerson.toFixed(2)}</h2>
+          <h2 data-testid="totalTipPerPerson">
+            ${totalTipPerPerson.toFixed(2)}
+          </h2>
         </section>
         <section>
           <div>
             <span>Total</span>
             <span>/ person</span>
           </div>
-          <h2>${totalAmountPerPerson.toFixed(2)}</h2>
+          <h2 data-testid="totalAmountPerPerson">
+            ${totalAmountPerPerson.toFixed(2)}
+          </h2>
         </section>
       </div>
       <Button disabled={disableReset} onClick={reset}>
