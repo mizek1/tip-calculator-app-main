@@ -19,7 +19,7 @@ export function NumberInput({
 }: NumberInputProps) {
   return (
     <Input
-      data-testid="input-number"
+      data-testid={'input-number-' + name}
       type="number"
       name={name}
       min={min}
