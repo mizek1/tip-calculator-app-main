@@ -1,4 +1,4 @@
-import NumberInput from '../Input/NumberInput';
+import { NumberInput } from '../NumberInput';
 import { Tips, TipSelect } from './TipsSelect.styles';
 
 export interface TipsSelectProps {

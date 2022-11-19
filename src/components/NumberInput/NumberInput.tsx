@@ -9,7 +9,7 @@ export interface NumberInputProps {
   iconUrl?: string;
 }
 
-export default function NumberInput({
+export function NumberInput({
   name,
   placeholder,
   value,
@@ -19,6 +19,7 @@ export default function NumberInput({
 }: NumberInputProps) {
   return (
     <Input
+      data-testid="input-number"
       type="number"
       name={name}
       min={min}
