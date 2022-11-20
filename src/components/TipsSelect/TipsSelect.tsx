@@ -6,7 +6,7 @@ export interface TipsSelectProps {
   onSelectedTipChange: (value: number) => void;
 }
 
-export default function TipsSelect({
+export function TipsSelect({
   selectedTip,
   onSelectedTipChange,
 }: TipsSelectProps) {

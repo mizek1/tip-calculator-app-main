@@ -3,7 +3,7 @@ import './styles/App.less';
 import { Display } from './components/Display';
 import { NumberInput } from './components/NumberInput';
 import { Card, InputGroup, Label } from './styles/General.styles';
-import TipsSelect from './components/TipsSelect/TipsSelect';
+import { TipsSelect } from './components/TipsSelect';
 
 function App() {
   const [bill, setBill] = useState<number>(0);
