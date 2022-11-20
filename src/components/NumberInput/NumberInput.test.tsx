@@ -1,4 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../../styles/General.styles';
 import { NumberInput, NumberInputProps } from './NumberInput';
 
 const mock: NumberInputProps = {
@@ -10,7 +12,11 @@ const mock: NumberInputProps = {
 };
 
 const sut = async () => {
-  return await render(<NumberInput {...mock} />);
+  return await render(
+    <ThemeProvider theme={theme}>
+      <NumberInput {...mock} />
+    </ThemeProvider>
+  );
 };
 
 describe('NumberInput', () => {

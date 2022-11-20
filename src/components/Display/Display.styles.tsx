@@ -5,7 +5,7 @@ export const Amounts = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5rem 1rem 1rem 1rem;
-  background-color: hsl(183, 100%, 15%);
+  background-color: ${(props) => props.theme.main.neutral5};
   border-radius: 0.5rem;
   gap: 1rem;
 
@@ -24,13 +24,13 @@ export const Amounts = styled.div`
       & > span:first-child {
         display: block;
         font-size: 0.625rem;
-        color: hsl(0, 0%, 100%);
+        color: ${(props) => props.theme.main.neutral0};
       }
 
       & > span:last-child {
         display: block;
         font-size: 0.5rem;
-        color: hsl(184, 14%, 56%);
+        color: ${(props) => props.theme.main.neutral3};
       }
     }
   }
@@ -38,7 +38,7 @@ export const Amounts = styled.div`
   h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: hsl(172, 67%, 45%);
+    color: ${(props) => props.theme.main.primary};
   }
 
   @media (min-width: 1024px) {
@@ -50,8 +50,8 @@ export const Amounts = styled.div`
 export const Button = styled.button`
   border: none;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  color: hsl(183, 100%, 15%);
-  background-color: hsl(172, 67%, 45%);
+  color: ${(props) => props.theme.main.neutral5};
+  background-color: ${(props) => props.theme.main.primary};
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;

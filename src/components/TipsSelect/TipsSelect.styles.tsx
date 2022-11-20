@@ -15,17 +15,17 @@ export const Tips = styled.section`
     border: none;
     border-radius: 0.25rem;
     text-align: right;
-    background-color: hsl(189, 41%, 97%);
-    color: hsl(183, 100%, 15%);
+    background-color: ${(props) => props.theme.main.neutral1};
+    color: ${(props) => props.theme.main.neutral5};
     font-size: 1rem;
     padding: 0.25rem 0.5rem;
 
     &:focus {
-      outline: 2px solid hsl(172, 67%, 45%);
+      outline: 2px solid ${(props) => props.theme.main.primary};
     }
 
     &::placeholder {
-      color: hsl(186, 14%, 43%);
+      color: ${(props) => props.theme.main.neutral4};
     }
   }
 
@@ -38,18 +38,18 @@ export const Tips = styled.section`
 export const TipSelect = styled.span`
   display: block;
   padding: 0.5rem;
-  background-color: ${({ className }) =>
-    className === 'selected' ? 'hsl(172, 67%, 45%)' : 'hsl(183, 100%, 15%)'};
+  background-color: ${({ className, theme }) =>
+    className === 'selected' ? theme.main.primary : theme.main.neutral5};
   text-align: center;
   border-radius: 0.25rem;
-  color: ${({ className }) =>
-    className === 'selected' ? 'hsl(183, 100%, 15%)' : 'hsl(0, 0%, 100%)'};
+  color: ${({ className, theme }) =>
+    className === 'selected' ? theme.main.natural : theme.main.neutral0};
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: hsl(172, 67%, 45%);
-    color: hsl(183, 100%, 15%);
+    background-color: ${(props) => props.theme.main.primary};
+    color: ${(props) => props.theme.main.neutral5};
     filter: brightness(1.1);
   }
 `;

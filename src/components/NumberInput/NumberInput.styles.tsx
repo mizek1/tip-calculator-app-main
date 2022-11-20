@@ -11,16 +11,16 @@ export const Input = styled.input<InputProps>`
   padding: 0.375rem 0.75rem 0.375rem 1.75rem;
   ${({ iconUrl }) =>
     iconUrl && `background: url(${iconUrl}) no-repeat 0.75rem center`};
-  background-color: hsl(189, 41%, 97%);
-  color: hsl(183, 100%, 15%);
+  background-color: ${(props) => props.theme.main.neutral1};
+  color: ${(props) => props.theme.main.neutral5};
   text-align: right;
 
   &:focus {
-    outline: 2px solid hsl(172, 67%, 45%);
+    outline: 2px solid ${(props) => props.theme.main.primary};
   }
 
   &::placeholder {
-    color: hsl(186, 14%, 43%);
+    color: ${(props) => props.theme.main.neutral4};
   }
 
   &::-webkit-outer-spin-button,

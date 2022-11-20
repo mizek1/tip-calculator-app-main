@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../../styles/General.styles';
 import { Display, DisplayProps } from './Display';
 
 const mock: DisplayProps = {
@@ -9,7 +11,11 @@ const mock: DisplayProps = {
 };
 
 const sut = async (props: DisplayProps = mock) => {
-  return await render(<Display {...props} />);
+  return await render(
+    <ThemeProvider theme={theme}>
+      <Display {...props} />
+    </ThemeProvider>
+  );
 };
 
 describe('Display', () => {

@@ -1,4 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../../styles/General.styles';
 import { TipsSelect, TipsSelectProps } from './TipsSelect';
 
 const mock: TipsSelectProps = {
@@ -7,7 +9,11 @@ const mock: TipsSelectProps = {
 };
 
 const sut = async () => {
-  return await render(<TipsSelect {...mock} />);
+  return await render(
+    <ThemeProvider theme={theme}>
+      <TipsSelect {...mock} />
+    </ThemeProvider>
+  );
 };
 
 describe('TipsSelect', () => {

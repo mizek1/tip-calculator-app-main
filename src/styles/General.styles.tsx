@@ -1,9 +1,21 @@
 import styled from 'styled-components';
 
+export const theme = {
+  main: {
+    primary: 'hsl(172, 67%, 45%)',
+    neutral0: 'hsl(0, 0%, 100%)',
+    neutral1: 'hsl(189, 41%, 97%)',
+    neutral2: 'hsl(185, 41%, 84%)',
+    neutral3: 'hsl(184, 14%, 56%)',
+    neutral4: 'hsl(186, 14%, 43%)',
+    neutral5: 'hsl(183, 100%, 15%)',
+  },
+};
+
 export const Card = styled.main`
   display: flex;
   flex-direction: column;
-  background-color: hsl(0, 0%, 100%);
+  background-color: ${(props) => props.theme.main.neutral0};
   padding: 1rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -23,7 +35,7 @@ export const Card = styled.main`
 export const Label = styled.span`
   display: block;
   font-size: 0.75rem;
-  color: hsl(186, 14%, 43%);
+  color: ${(props) => props.theme.main.neutral4};
 `;
 
 export const InputGroup = styled.div`

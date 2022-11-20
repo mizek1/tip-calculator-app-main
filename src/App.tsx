@@ -2,8 +2,9 @@ import { useState } from 'react';
 import './styles/App.less';
 import { Display } from './components/Display';
 import { NumberInput } from './components/NumberInput';
-import { Card, InputGroup, Label } from './styles/General.styles';
+import { Card, InputGroup, Label, theme } from './styles/General.styles';
 import { TipsSelect } from './components/TipsSelect';
+import { ThemeProvider } from 'styled-components';
 
 function App() {
   const [bill, setBill] = useState<number>(0);
@@ -43,7 +44,7 @@ function App() {
   }
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <header>
         <h1>
           SPLI
@@ -92,7 +93,7 @@ function App() {
           reset={reset}
         />
       </Card>
-    </>
+    </ThemeProvider>
   );
 }
 
